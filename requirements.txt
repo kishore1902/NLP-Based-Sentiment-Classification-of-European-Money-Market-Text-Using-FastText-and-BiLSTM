@@ -2,3 +2,4 @@ streamlit==1.50.0
 tensorflow==2.21.0
 keras==3.13.2
 numpy
+h5py
