@@ -40,8 +40,13 @@ def load_trained_model():
     """
 
     return load_model("model_bi_lstm_model.h5")
-
-
+import os, hashlib
+p = "model_bi_lstm_model.h5"
+st.write("exists:", os.path.exists(p))
+if os.path.exists(p):
+    st.write("size:", os.path.getsize(p))
+    st.write("header:", open(p, "rb").read(8))
+    st.write("md5:", hashlib.md5(open(p, "rb").read()).hexdigest())
 model = load_trained_model()
 
 
